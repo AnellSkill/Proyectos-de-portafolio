@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reloj digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hero">
+        <div id="clockContainer">
+            <div id="clock">
+                <span id="hrs" class="hrs">00</span>
+                <span>:</span>
+                <span id="min" class="min">00</span>
+                <span>:</span>
+                <span id="sec" class="sec">00</span>
+                <h1 id="timeDif"></h1>
+                <div id="timerContainer">
+                    <div id="timer">
+                        <h3 class="title">Timer</h3>
+                        <hr>
+                        <div id="timerCount">
+                            <div class="picker1">
+                            <button class="p1up" onclick="addHour()">▲</button>
+                            <input type="number" min="0" max="23" id="dhrs" oninput="limitTime()" placeholder="HRS">
+                            <button class="p1down" onclick="subHour()">▼</button>
+                            </div>
+                            <span>:</span>
+                            <div class="picker2">
+                            <button class="p2up" onclick="addMinute()">▲</button>
+                            <input type="number" min="0" max="59" id="dmin" oninput="limitTime()" placeholder="MIN">
+                            <button class="p2down" onclick="subMinute()">▼</button>
+                            </div>
+                            <span>:</span>
+                            <div class="picker3">
+                            <button class="p1up" onclick="addSecond()">▲</button>
+                            <input type="number" min="0" max="59" id="dsec" oninput="limitTime()" placeholder="SEC">
+                            <button class="p1down" onclick="subSecond()">▼</button>
+                            </div>
+                        </div>
+                        <div id="container-buttonTimer">
+                            <button class="buttonTimer" onclick="startTimer()">Start</button>
+                            <button class="buttonTimer" onclick="stopTimer()">Stop</button>
+                            <button class="buttonTimer" onclick="resetTimer()">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="swContainer">
+                    <div id="stopWatch">
+                        <h3 class="title">Stopwatch</h3>
+                        <hr>
+                        <div id="stopWatchCount">
+                        <span id="shrs" class="hrs">00</span>
+                        <span>:</span>
+                        <span id="smin" class="min">00</span>
+                        <span>:</span>
+                        <span id="ssec" class="sec">00</span>
+                        </div>
+                        <div id="container-buttonStopwatch">
+                            <button class="buttonStopwatch" onclick="startStopwatch()">Start</button>
+                            <button class="buttonStopwatch" onclick="stopStopwatch()">Stop</button>
+                            <button class="buttonStopwatch" onclick="resetStopwatch()">Reset</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="stopWatch.js"></script>
+    <script src="clock.js"></script>
+    <script src="timer.js"></script>
+</body>
+</html>

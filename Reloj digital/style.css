@@ -1,0 +1,300 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald';
+    box-sizing: border-box;
+}
+
+#hero{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #4e0021, #002735);
+    color: #fff;
+    position: relative;
+}
+
+#clockContainer{
+    height: 500px;
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#clock{
+    width: 100%;
+    height: 100%;
+    background: rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+}
+
+#clockContainer::before{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #ff006a;
+    border-radius: 5px;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    z-index: -1;
+}
+
+#clockContainer::after{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #00b7ff;
+    border-radius: 50%;
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    z-index: -1;
+}
+
+#clock span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+}
+
+#clock span:after{
+    font-size: 16px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hrs:after{
+    content: 'HRS';
+}
+.min:after{
+    content: 'MIN';
+}
+.sec:after{
+    content: 'SEC';
+}
+
+#timerContainer{
+    height: 50%;
+    width: 350px;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top: 230px;
+    right: 420px;
+    border-radius: 15px;
+}
+
+#timer{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background: rgba(255, 0, 0, 0.25);
+    border-radius: 10px;
+    backdrop-filter: blur(40px);
+}
+
+#timerCount{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#timer span{
+    font-size: 40px;
+    width: 110px;
+    text-align: center;
+    position: relative;
+    top: 0;
+}
+
+#timer span:after{
+    font-size: 16px;
+    position: absolute;
+    bottom: -15px;
+}
+
+#swContainer{
+    height: 50%;
+    width: 350px;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top: 230px;
+    left: 420px;
+    border-radius: 15px;
+}
+
+#stopWatch{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    background: rgba(4, 0, 255, 0.25);
+    border-radius: 10px;
+    backdrop-filter: blur(40px);
+}
+
+#stopWatchCount{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#stopWatch span{
+    font-size: 40px;
+    width: 110px;
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
+
+#stopWatch span:after{
+    font-size: 16px;
+    position: absolute;
+    bottom: -15px;
+}
+
+button{
+    position: relative;
+    width: 25%;
+    top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-style: hidden;
+}
+
+button:hover{
+    opacity: 0.6;
+    color: #fff;
+    background-color: black;
+}
+
+.buttonTimer{
+    top: -40px;
+}
+
+.buttonStopwatch{
+    top: 60px;
+}
+
+input{
+    font-size: 40px;
+    width: 100px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    text-align: center;
+}
+
+#timerCount{
+    position: relative;
+    top: -30px;
+    right: 5px;
+}
+
+input::-webkit-inner-spin-button, 
+input::-webkit-outer-spin-butto{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#timeDif{
+    font-size: 30px;
+    position: relative;
+    bottom: 76px;
+    right: 10px;
+}
+
+.picker1{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.picker1 button{
+background:none;
+border:none;
+color:white;
+font-size:20px;
+cursor:pointer;
+}
+
+.picker2{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.picker2 button{
+background:none;
+border:none;
+color:white;
+font-size:20px;
+cursor:pointer;
+}
+
+.picker3{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.picker3 button{
+background:none;
+border:none;
+color:white;
+font-size:20px;
+cursor:pointer;
+}
+
+.p1up{
+    position: relative;
+    left: -8px;
+}
+
+.p1down{
+    position: relative;
+    top: -20px;
+    left: -8px;
+}
+
+.p2up{
+    position: relative;
+    left: -8px;
+}
+
+.p2down{
+    position: relative;
+    top: -20px;
+    left: -8px;
+}
+
+.p3up{
+    position: relative;
+    left: -8px;
+}
+
+.p3down{
+    position: relative;
+    top: -20px;
+    left: -8px;
+}
